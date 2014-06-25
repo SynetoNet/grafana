@@ -108,7 +108,7 @@ function (angular, $, config, _) {
 
     $scope.panel_path =function(type) {
       if(type) {
-        return 'app/panels/'+type.replace(".","/");
+        return '/grafana/app/panels/'+type.replace(".","/");
       } else {
         return false;
       }

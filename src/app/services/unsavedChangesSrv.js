@@ -46,7 +46,7 @@ function(angular, _, config) {
 
     this.open_modal = function() {
       var confirmModal = $modal({
-          template: './app/partials/unsaved-changes.html',
+          template: '/grafana/app/partials/unsaved-changes.html',
           persist: true,
           show: false,
           scope: modalScope,

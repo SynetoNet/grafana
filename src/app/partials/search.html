@@ -20,7 +20,7 @@
     <li ng-if="!showImport">
       <div class="grafana-search-panel">
         <div class="search-field-wrapper">
-          <button class="btn btn-success pull-right" config-modal="app/partials/playlist.html">
+          <button class="btn btn-success pull-right" config-modal="/grafana/app/partials/playlist.html">
             <i class="icon-play"></i>
             Playlist
           </button>
@@ -86,7 +86,7 @@
                 {{tag}}
               </a>
             </td>
-            <td><a><i class="icon-share" ng-click="share = dashboard.share_link(row._id,'elasticsearch',row._id)" config-modal="app/partials/dashLoaderShare.html"></i></a></td>
+            <td><a><i class="icon-share" ng-click="share = dashboard.share_link(row._id,'elasticsearch',row._id)" config-modal="/grafana/app/partials/dashLoaderShare.html"></i></a></td>
           </tr>
         </table>
       </div>

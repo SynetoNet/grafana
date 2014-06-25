@@ -15,7 +15,6 @@
 }
 
 .container.grafana-container {
-  padding: 5px 10px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -68,6 +67,7 @@ code, pre {
 .panel {
   display: inline-table;
   vertical-align: top;
+	margin-bottom: 0;
 }
 
 .panel-container {
@@ -82,14 +82,15 @@ code, pre {
 
 .panel-title {
   border: 0px;
+	font-size: 12px;
   font-weight: bold;
 }
 
 .panel-loading {
   position:absolute;
-  top: 0px;
+  top: 40px;
   right: 4px;
-  z-index: 800;
+  z-index: 10;
 }
 
 .panel div.panel-extra div.panel-extra-container {
@@ -102,7 +103,6 @@ code, pre {
 }
 
 .panel div.panel-extra {
-  font-size: 0.9em;
   margin-bottom: 0px;
 }
 
@@ -201,6 +201,7 @@ form input.ng-invalid {
 
 .kibana-row {
   margin-bottom: 5px;
+  margin-top: 20px;
 }
 
 .row-tab {
@@ -371,7 +372,8 @@ div.flot-text {
   margin-left:0px;
   padding:3px 0px 3px 0px;
   width:100%;
-  padding-left:20px;
+  padding-left: 20px;
+  line-height: 24px;
   color: @white;
 }
 

@@ -11,9 +11,9 @@ function (angular, _, $) {
   function PanelBaseCtrl($scope, $rootScope, $timeout) {
 
     var menu = [
-      {
+			/*{
         text: 'Edit',
-        configModal: "app/partials/paneleditor.html",
+        configModal: "/grafana/app/partials/paneleditor.html",
         condition: !$scope.panelMeta.fullscreenEdit
       },
       {
@@ -48,11 +48,11 @@ function (angular, _, $) {
           { text: '12', click: 'updateColumnSpan(12)' },
         ],
         condition: true
-      },
+      },*/
       {
         text: 'Remove',
         click: 'remove_panel_from_row(row, panel)',
-        condition: true
+        condition: ($('#current-page').val() == 'analytics')
       }
     ];
 

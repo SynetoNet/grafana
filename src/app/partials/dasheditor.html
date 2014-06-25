@@ -133,11 +133,11 @@
   </div>
 
   <div ng-if="editor.index == 3">
-    <ng-include src="'app/partials/loadmetrics.html'"></ng-include>
+    <ng-include src="'/grafana/app/partials/loadmetrics.html'"></ng-include>
   </div>
 
   <div ng-if="editor.index == 4">
-    <ng-include src="'app/partials/import.html'"></ng-include>
+    <ng-include src="'/grafana/app/partials/import.html'"></ng-include>
   </div>
 
   <div ng-repeat="pulldown in dashboard.current.nav" ng-controller="SubmenuCtrl" ng-show="editor.index == 5+$index">
@@ -149,8 +149,8 @@
 
 <div class="modal-footer">
   <div class="pull-left grafana-version-footer" ng-if="editor.index == 0">
-    <span class="editor-option small">
-      Grafana version: {{grafanaVersion}}
+    <span class="editor-option small hidden">
+      Version: {{grafanaVersion}}
     </span>
     <div class="small" grafana-version-check>
     </div>

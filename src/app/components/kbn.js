@@ -482,7 +482,7 @@ function($, _, moment) {
 
   kbn.msFormat = function(size, decimals) {
     if (size < 1000) {
-      return size.toFixed(0) + " ms";
+      return size.toFixed(decimals) + " ms";
     }
     // Less than 1 min
     else if (size < 60000) {

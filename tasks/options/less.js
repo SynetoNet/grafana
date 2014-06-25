@@ -6,7 +6,7 @@ module.exports = function(config) {
     dist:{
       expand: true,
       cwd:'<%= srcDir %>/vendor/bootstrap/less/',
-      src: ['bootstrap.dark.less', 'bootstrap.light.less'],
+      src: ['bootstrap.light.less'],
       dest: '<%= tempDir %>/css/',
     },
     // Compile in place when not building
@@ -16,7 +16,7 @@ module.exports = function(config) {
         yuicompress:true
       },
       files: {
-        "<%= srcDir %>/css/bootstrap.dark.min.css": "<%= srcDir %>/css/less/bootstrap.dark.less",
+        //"<%= srcDir %>/css/bootstrap.dark.min.css": "<%= srcDir %>/css/less/bootstrap.dark.less",
         "<%= srcDir %>/css/bootstrap.light.min.css": "<%= srcDir %>/css/less/bootstrap.light.less",
         "<%= srcDir %>/css/bootstrap-responsive.min.css": "<%= srcDir %>/css/less/grafana-responsive.less"
       }

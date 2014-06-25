@@ -20,7 +20,7 @@ function (angular, $, _, PanelBaseCtrl) {
           '<div class="span12 alert-error panel-error small" ng-show="panel.error">' +
             '<a class="close" ng-click="panel.error=false">&times;</a>' +
             '<span><i class="icon-exclamation-sign"></i> <strong>Oops!</strong> {{panel.error}} </span>' +
-            '<span class="pointer panel-error-inspector-link" config-modal="app/partials/inspector.html">View details</span>' +
+            //'<span class="pointer panel-error-inspector-link" config-modal="/grafana/app/partials/inspector.html">View details</span>' +
           '</div>' +
         '</div>\n' +
 

@@ -70,6 +70,9 @@ a.text-success:hover { color: darken(@green, 10%); }
 
 	.navbar-inner {
 		background-image: none;
+	  	padding-right: 0px;
+	  	min-height: 0;
+	  	border: none;
 		.box-shadow(none);
 		.border-radius(0);
 	}
@@ -79,6 +82,10 @@ a.text-success:hover { color: darken(@green, 10%); }
 		&:hover {
 			color: @navbarLinkColorHover;
 		}
+	}
+
+  	.nav > li > a {
+	  padding: 8px 15px;
 	}
 
 	.nav > .active > a,
@@ -158,6 +165,7 @@ div.subnav {
 // -----------------------------------------------------
 
 .nav {
+  	padding-top: 0px;
 
 	.open .dropdown-toggle,
 	& > li.dropdown.open.active > a:hover {
@@ -516,12 +524,6 @@ a:hover {
 }
 
 .hero-unit {
-	border: none;
-	.border-radius(0);
-	.box-shadow(none);
-}
-
-.well {
 	border: none;
 	.border-radius(0);
 	.box-shadow(none);

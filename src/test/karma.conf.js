@@ -9,7 +9,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'test/test-main.js',
-      {pattern: 'app/**/*.js', included: false},
+      {pattern: '/grafana/app/**/*.js', included: false},
       {pattern: 'vendor/**/*.js', included: false},
       {pattern: 'test/**/*.js', included: false},
       {pattern: '**/*.js', included: false}

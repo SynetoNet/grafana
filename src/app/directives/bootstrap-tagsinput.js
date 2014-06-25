@@ -88,6 +88,9 @@ function (angular, $) {
     .directive('gfDropdown', function ($parse, $compile, $timeout) {
 
       function buildTemplate(items, placement) {
+				if (!items.length) {
+					return [];
+				}
         var upclass = placement === 'top' ? 'dropup' : '';
         var ul = [
           '<ul class="dropdown-menu ' + upclass + '" role="menu" aria-labelledby="drop1">',

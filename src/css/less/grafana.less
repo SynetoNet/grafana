@@ -123,35 +123,37 @@
   font-size: 12px;
 }
 
-.hidden-series {
+.histogram-legend {
   a {
-    color: darken(@linkColor, 45%);
+	text-decoration: none;
+	padding: 0 1px;
+	margin-right: 5px;
+	font-weight: bold;
+	padding: 0;
   }
 }
 
-.panel-fullscreen {
+.hidden-series {
+  a {
+    color: darken(@linkColor, 45%);
+	font-weight: normal;
+  }
+}
+
+.our-panel-fullscreen {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  height: 90%;
   z-index: 100;
   display: block !important;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  top: 54px;
-  height: 100%;
-  padding: 0 10px;
+  padding: 20px 10px 0 10px;
   background: @kibanaPanelBackground;
-  overflow-y: scroll;
-  height: 100%;
 
   .panel-content {
     padding-bottom: 130px;
   }
-}
-
-.dashboard-fullscreen .container-fluid.main {
-  height: 0px;
-  width: 0px;
-  position: fixed;
-  right: -10000px;
 }
 
 // Graphite Graph Legends
@@ -233,7 +235,6 @@
     line-height: 15px;
     padding-top: 6px;
     padding-bottom: 6px;
-    font-size: 0.8rem;
   }
 }
 
@@ -418,50 +419,6 @@ select.grafana-target-segment-input {
   max-height: 300px;
   overflow: auto;
 }
-
-
-//
-// Srollbars
-//
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar:hover {
-  height: 8px;
-}
-
-::-webkit-scrollbar-button:start:decrement,
-::-webkit-scrollbar-button:end:increment { display: none;  }
-::-webkit-scrollbar-button:horizontal:decrement {  display: none; }
-::-webkit-scrollbar-button:horizontal:increment {  display: none; }
-::-webkit-scrollbar-button:vertical:decrement { display: none; }
-::-webkit-scrollbar-button:vertical:increment { display: none; }
-::-webkit-scrollbar-button:horizontal:decrement:active { background-image: none; }
-::-webkit-scrollbar-button:horizontal:increment:active { background-image: none; }
-::-webkit-scrollbar-button:vertical:decrement:active { background-image: none; }
-::-webkit-scrollbar-button:vertical:increment:active {background-image: none; }
-
-::-webkit-scrollbar-track-piece { background-color: grayDark; }
-
-::-webkit-scrollbar-thumb:vertical {
-  height: 50px;
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #3a3a3a), color-stop(100%, #222222));
-  border: 1px solid #0d0d0d;
-  border-top: 1px solid #666666;
-  border-left: 1px solid #666666;
-}
-
-::-webkit-scrollbar-thumb:horizontal {
-  width: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3a3a3a), color-stop(100%, #222222));
-  border: 1px solid #1f1f1f;
-  border-top: 1px solid #666666;
-  border-left: 1px solid #666666;
-}
-
 
 // SPECTRUM CSS overrides
 

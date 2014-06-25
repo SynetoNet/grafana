@@ -2,7 +2,8 @@
  * Bootstrap require with the needed config, then load the app.js module.
  */
 require.config({
-  baseUrl: 'app',
+  baseUrl: '/grafana/app',
+  urlArgs: 'v=' + (new Date()).getTime(),
 
   paths: {
     config:                   ['../config', '../config.sample'],

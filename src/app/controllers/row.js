@@ -106,6 +106,10 @@ function (angular, app, _) {
     $scope.remove_panel_from_row = function(row, panel) {
       if (confirm('Are you sure you want to remove this ' + panel.type + ' panel?')) {
         row.panels = _.without(row.panels,panel);
+				if (row.panels.length == 0) {
+					$scope.dashboard.current.rows = _.without($scope.dashboard.current.rows, $scope.row);
+				}
+				$scope.dashboard.to_server();
       }
     };
 

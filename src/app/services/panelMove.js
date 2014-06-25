@@ -59,6 +59,10 @@ function (angular, _) {
       _.each(dashboard.current.rows, function(row) {
         row.panels = _.without(row.panels,{});
         row.panels = _.compact(row.panels);
+				if (row.panels.length == 0) {
+					dashboard.current.rows = _.without(dashboard.current.rows, row);
+				}
+				dashboard.to_server();
       });
     };
 

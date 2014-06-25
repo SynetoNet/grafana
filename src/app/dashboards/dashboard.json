@@ -1,0 +1,477 @@
+{
+	"title": "Analytics",
+	"services": {
+		"filter": {
+			"list": [],
+			"time": {
+				"from": "now-1h",
+				"to": "now"
+			}
+		}
+	},
+	"rows": [
+		{
+			"title": "Networking",
+			"height": "200px",
+			"editable": false,
+			"collapse": false,
+			"collapsable": false,
+			"panels": [
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"bytes",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)"
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(exclude(*.interface-*.if_octets.rx,'mac'),'interface-',''), 1, 'avg')),-1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Network - traffic in"
+				},
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"bits",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)",
+						"thresholdLine": false
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(exclude(*.interface-*.if_octets.tx,'mac'),'interface-',''),1,'avg')),-1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Network - traffic out",
+					"rightYAxisLabel": "",
+					"leftYAxisLabel": ""
+				}
+			],
+			"notice": false
+		},
+		{
+			"title": "Pools IOPS",
+			"height": "200px",
+			"editable": false,
+			"collapse": false,
+			"collapsable": false,
+			"panels": [
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"none",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)"
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(*.iostat-pool-*.gauge-iops_write-ws,'iostat-pool-',''),1,'avg')),-1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Pools - IOPS write"
+				},
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"none",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)",
+						"thresholdLine": false
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(*.iostat-pool-*.gauge-iops_read-rs,'iostat-pool-',''),1,'avg')), -1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Pools - IOPS read",
+					"rightYAxisLabel": "",
+					"leftYAxisLabel": ""
+				}
+			],
+			"notice": false
+		},
+		{
+			"title": "Pools Bandwidth",
+			"height": "200px",
+			"editable": false,
+			"collapse": false,
+			"collapsable": false,
+			"panels": [
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"bytes",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)"
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(*.iostat-pool-*.gauge-bandwidth_write-kws,'iostat-pool-',''),1,'avg')), -1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Pools - bandwidth write"
+				},
+				{
+					"span": 6,
+					"editable": false,
+					"type": "graphite",
+					"loadingEditor": false,
+					"datasource": null,
+					"renderer": "flot",
+					"x-axis": true,
+					"y-axis": true,
+					"scale": 1,
+					"y_formats": [
+						"bits",
+						"none"
+					],
+					"grid": {
+						"max": null,
+						"min": null,
+						"threshold1": null,
+						"threshold2": null,
+						"threshold1Color": "rgba(216, 200, 27, 0.27)",
+						"threshold2Color": "rgba(234, 112, 112, 0.22)",
+						"thresholdLine": false
+					},
+					"annotate": {
+						"enable": false
+					},
+					"resolution": 100,
+					"lines": true,
+					"fill": 1,
+					"linewidth": 1,
+					"points": false,
+					"pointradius": 5,
+					"bars": false,
+					"stack": false,
+					"legend": {
+						"show": true,
+						"values": false,
+						"min": false,
+						"max": false,
+						"current": false,
+						"total": false,
+						"avg": false
+					},
+					"percentage": false,
+					"zerofill": true,
+					"nullPointMode": "connected",
+					"steppedLine": false,
+					"tooltip": {
+						"value_type": "cumulative",
+						"query_as_alias": true
+					},
+					"targets": [
+						{
+							"target": "averageAbove(sortByName(groupByNode(aliasSub(*.iostat-pool-*.gauge-bandwidth_read-krs,'iostat-pool-',''),1,'avg')), -1)"
+						}
+					],
+					"aliasColors": {},
+					"aliasYAxis": {},
+					"title": "Pools - bandwidth read",
+					"rightYAxisLabel": "",
+					"leftYAxisLabel": ""
+				}
+			],
+			"notice": false
+		}
+	],
+	"editable": false,
+	"failover": false,
+	"panel_hints": false,
+	"style": "light",
+	"pulldowns": [
+		{
+			"type": "filtering",
+			"collapse": false,
+			"notice": false,
+			"enable": false
+		},
+		{
+			"type": "annotations",
+			"enable": false,
+			"annotations": []
+		}
+	],
+	"nav": [
+		{
+			"type": "timepicker",
+			"collapse": false,
+			"notice": false,
+			"enable": false,
+			"status": "Stable",
+			"time_options": [
+				"1m",
+				"5m",
+				"15m",
+				"1h",
+				"6h",
+				"12h",
+				"24h",
+				"2d",
+				"7d",
+				"30d"
+			],
+			"refresh_intervals": [
+				"1s",
+				"5s",
+				"10s",
+				"30s",
+				"1m",
+				"5m",
+				"15m",
+				"30m",
+				"1h",
+				"2h",
+				"1d"
+			],
+			"now": true
+		}
+	],
+	"loader": {
+		"save_gist": false,
+		"save_elasticsearch": false,
+		"save_local": false,
+		"save_default": false,
+		"save_temp": false,
+		"save_temp_ttl_enable": true,
+		"save_temp_ttl": "30d",
+		"load_gist": false,
+		"load_elasticsearch": false,
+		"load_elasticsearch_size": 20,
+		"load_local": true,
+		"hide": false
+	},
+	"refresh": "10s",
+	"tags": [],
+	"timezone": "Europe/Bucharest",
+	"hideControls": true
+}

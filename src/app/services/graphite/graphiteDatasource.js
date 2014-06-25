@@ -17,7 +17,7 @@ function (angular, _, $, config, kbn, moment) {
       this.type = 'graphite';
       this.basicAuth = datasource.basicAuth;
       this.url = datasource.url;
-      this.editorSrc = 'app/partials/graphite/editor.html';
+      this.editorSrc = '/grafana/app/partials/graphite/editor.html';
       this.name = datasource.name;
       this.render_method = datasource.render_method || 'POST';
     }

@@ -12,7 +12,7 @@ function (angular, _, kbn) {
 
     function InfluxDatasource(datasource) {
       this.type = 'influxDB';
-      this.editorSrc = 'app/partials/influxdb/editor.html';
+      this.editorSrc = '/grafana/app/partials/influxdb/editor.html';
       this.urls = datasource.urls;
       this.username = datasource.username;
       this.password = datasource.password;

@@ -67,7 +67,7 @@ function (angular, app, _, moment, kbn) {
     $scope.customTime = function() {
       if (!customTimeModal) {
         customTimeModal = $modal({
-          template: './app/panels/timepicker/custom.html',
+          template: '/grafana/app/panels/timepicker/custom.html',
           persist: true,
           show: false,
           scope: $scope,

@@ -43,7 +43,7 @@ function (angular, _, kbn) {
           var groupByIndex = lowerCaseQueryElements.indexOf("group");
           var orderIndex = lowerCaseQueryElements.indexOf("order");
 
-          if (lowerCaseQueryElements[1].indexOf(',')) {
+          if (lowerCaseQueryElements[1].indexOf(',') !== -1) {
             groupByField = lowerCaseQueryElements[1].replace(',', '');
           }
 
@@ -68,7 +68,7 @@ function (angular, _, kbn) {
         }
         else {
 
-          var template = "select [[group]][[group_comma]] [[func]](\"[[column]]\") as \"[[column]]_[[func]]\" from [[series]] " +
+          var template = "select [[group]][[group_comma]] [[func]]([[column]]) from [[series]] " +
                          "where  [[timeFilter]] [[condition_add]] [[condition_key]] [[condition_op]] [[condition_value]] " +
                          "group by time([[interval]])[[group_comma]] [[group]] order asc";
 
@@ -120,7 +120,7 @@ function (angular, _, kbn) {
         if (!data) {
           return [];
         }
-
+        return data[0].columns;
       });
     };
 
@@ -232,7 +232,7 @@ function (angular, _, kbn) {
             datapoints[i] = [metricValue, groupPoints[i][timeCol]];
           }
 
-          seriesName = alias ? alias : series.name;
+          seriesName = alias ? alias : (series.name + '.' + key);
 
           // if mulitple groups append key to alias
           if (alias && groupByField) {

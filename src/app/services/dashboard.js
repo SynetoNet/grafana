@@ -14,14 +14,14 @@ define([
 		var module = angular.module('kibana.services');
 
 		module.service('dashboard', function ($routeParams, $http, $rootScope, $injector, $location, $timeout,
-											  ejsResource, timer, alertSrv, $q) {
+																					ejsResource, timer, alertSrv, $q) {
 			// A hash of defaults to use when loading a dashboard
 
 			var _dash = {
 				title: "",
 				tags: [],
-				style: "light",
-				timezone: "UTC",
+				style: "dark",
+				timezone: 'browser',
 				editable: true,
 				failover: false,
 				panel_hints: true,
@@ -164,7 +164,7 @@ define([
 				// Make sure the dashboard being loaded has everything required
 				dashboard = dash_defaults(dashboard);
 
-				//window.document.title = dashboard.title;
+				window.document.title = 'Grafana - ' + dashboard.title;
 
 				// Set the current dashboard
 				self.current = angular.copy(dashboard);
@@ -471,20 +471,28 @@ define([
 					});
 			};
 
+			this.start_scheduled_refresh = function (after_ms) {
+				this.cancel_scheduled_refresh();
+				self.refresh_timer = timer.register($timeout(function () {
+					self.start_scheduled_refresh(after_ms);
+					self.refresh();
+				}, after_ms));
+			};
+
+			this.cancel_scheduled_refresh = function () {
+				timer.cancel(self.refresh_timer);
+			};
+
 			this.set_interval = function (interval) {
 				self.current.refresh = interval;
 				if (interval) {
 					var _i = kbn.interval_to_ms(interval);
-					timer.cancel(self.refresh_timer);
-					self.refresh_timer = timer.register($timeout(function () {
-						self.set_interval(interval);
-						self.refresh();
-					}, _i));
-					self.refresh();
+					this.start_scheduled_refresh(_i);
 				} else {
-					timer.cancel(self.refresh_timer);
+					this.cancel_scheduled_refresh();
 				}
 			};
+
 		});
 
 	});

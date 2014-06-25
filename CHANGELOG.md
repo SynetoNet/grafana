@@ -1,8 +1,16 @@
-vNext
+# 1.6.1 (2014-06-24)
+
+**New features or improvements**
+- Ability to set y min/max for right y-axis (RR #519, Closes #360) - thx @acedrew
 
 **Fixes**
 
 - Fixes regex InfluxDB queries intoduced in 1.6.0 (PR #500)
+- Bug in when using % sign in legends (aliases), fixed by removing url decoding of metric names (Fixes #506)
+- Series names and column name typeahead cache fix (Fixes #522)
+- Fixed influxdb issue with raw query that caused wrong value column detection (Fixes #504)
+- Default property that marks which datasource is default in config.js is now optional (Fixes #526)
+- Auto-refresh caused 2 refreshes (and hence mulitple queries) each time (at least in firefox) (Fixes #342)
 
 # 1.6.0 (2014-06-16)
 

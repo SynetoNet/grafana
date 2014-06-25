@@ -11,137 +11,6 @@
   },
   "rows": [
     {
-      "title": "Network",
-      "height": "200px",
-      "editable": false,
-      "collapse": false,
-      "collapsable": false,
-      "panels": [
-        {
-          "span": 6,
-          "editable": false,
-          "type": "graph",
-          "loadingEditor": false,
-          "datasource": null,
-          "renderer": "flot",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_formats": [
-            "bytes",
-            "none"
-          ],
-          "grid": {
-            "max": null,
-            "min": null,
-            "threshold1": null,
-            "threshold2": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)",
-            "thresholdLine": false
-          },
-          "annotate": {
-            "enable": false
-          },
-          "resolution": 100,
-          "lines": true,
-          "fill": 1,
-          "linewidth": 1,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": false,
-          "legend": {
-            "show": true,
-            "values": false,
-            "min": false,
-            "max": false,
-            "current": false,
-            "total": false,
-            "avg": false
-          },
-          "percentage": false,
-          "zerofill": true,
-          "nullPointMode": "connected",
-          "steppedLine": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "targets": [
-            {
-              "target": "averageAbove(sortByName(groupByNode(aliasSub(exclude(*.interface-*.if_octets.tx,'mac'),'interface-',''),1,'avg')),-1)"
-            }
-          ],
-          "aliasColors": {},
-          "aliasYAxis": {},
-          "title": "Network - traffic out",
-          "rightYAxisLabel": "",
-          "leftYAxisLabel": ""
-        },
-        {
-          "span": 6,
-          "editable": false,
-          "type": "graph",
-          "loadingEditor": false,
-          "datasource": null,
-          "renderer": "flot",
-          "x-axis": true,
-          "y-axis": true,
-          "scale": 1,
-          "y_formats": [
-            "none",
-            "none"
-          ],
-          "grid": {
-            "max": null,
-            "min": null,
-            "threshold1": null,
-            "threshold2": null,
-            "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
-          },
-          "annotate": {
-            "enable": false
-          },
-          "resolution": 100,
-          "lines": true,
-          "fill": 1,
-          "linewidth": 1,
-          "points": false,
-          "pointradius": 5,
-          "bars": false,
-          "stack": false,
-          "legend": {
-            "show": true,
-            "values": false,
-            "min": false,
-            "max": false,
-            "current": false,
-            "total": false,
-            "avg": false
-          },
-          "percentage": false,
-          "zerofill": true,
-          "nullPointMode": "connected",
-          "steppedLine": false,
-          "tooltip": {
-            "value_type": "cumulative",
-            "query_as_alias": true
-          },
-          "targets": [
-            {
-              "target": "averageAbove(sortByName(groupByNode(aliasSub(*.iostat-disk-*.gauge-iops_write-ws,'iostat-disk-',''),1,'avg')),-1)"
-            }
-          ],
-          "aliasColors": {},
-          "aliasYAxis": {},
-          "title": "Disks - IOPS write"
-        }
-      ],
-      "notice": false
-    },
-    {
       "title": "Dataset",
       "height": "200px",
       "editable": false,
@@ -169,7 +38,11 @@
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
             "threshold2Color": "rgba(234, 112, 112, 0.22)",
-            "thresholdLine": false
+            "thresholdLine": false,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false
@@ -231,7 +104,11 @@
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
             "threshold2Color": "rgba(234, 112, 112, 0.22)",
-            "thresholdLine": false
+            "thresholdLine": false,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false
@@ -303,7 +180,11 @@
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
             "threshold2Color": "rgba(234, 112, 112, 0.22)",
-            "thresholdLine": false
+            "thresholdLine": false,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false
@@ -364,7 +245,11 @@
             "threshold1": null,
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false
@@ -433,7 +318,11 @@
             "threshold1": null,
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false
@@ -492,7 +381,11 @@
             "threshold1": null,
             "threshold2": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
-            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null
           },
           "annotate": {
             "enable": false

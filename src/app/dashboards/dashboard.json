@@ -426,7 +426,7 @@
 			"type": "timepicker",
 			"collapse": false,
 			"notice": false,
-			"enable": false,
+			"enable": true,
 			"status": "Stable",
 			"time_options": [
 				"1m",

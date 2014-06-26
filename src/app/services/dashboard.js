@@ -201,7 +201,7 @@ define([
 			this.to_server = function () {
 				var dashboard = angular.copy(self.current);
 				return $http({
-					url: "/analytics/saveDashboard.json",
+					url: "/analytics/saveDashboard.json?page=" + $('#current-page').val(),
 					method: "POST",
 					data: {
 						configuration: angular.toJson(dashboard, true)

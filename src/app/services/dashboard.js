@@ -164,8 +164,6 @@ define([
 				// Make sure the dashboard being loaded has everything required
 				dashboard = dash_defaults(dashboard);
 
-				window.document.title = 'Grafana - ' + dashboard.title;
-
 				// Set the current dashboard
 				self.current = angular.copy(dashboard);
 				if (dashboard.refresh) {

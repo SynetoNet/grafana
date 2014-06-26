@@ -544,6 +544,6 @@
   },
   "refresh": false,
   "tags": [],
-  "timezone": "Europe/Bucharest",
+  "timezone": "browser",
   "hideControls": false
 }

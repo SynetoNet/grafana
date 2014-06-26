@@ -472,6 +472,6 @@
 	},
 	"refresh": "10s",
 	"tags": [],
-	"timezone": "Europe/Bucharest",
+	"timezone": "browser",
 	"hideControls": true
 }

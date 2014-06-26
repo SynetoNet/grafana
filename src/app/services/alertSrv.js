@@ -18,7 +18,7 @@ function (angular, _) {
         _a = {
           title: title || '',
           text: text || '',
-          severity: severity || 'info',
+          severity: severity || 'info'
         },
         _ca = angular.toJson(_a),
         _clist = _.map(self.list,function(alert) {return angular.toJson(alert);});

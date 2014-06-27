@@ -145,7 +145,7 @@
           ],
           "aliasColors": {},
           "aliasYAxis": {},
-          "title": "Disks - IOPS read",
+          "title": "Disks - IOPS read (rs)",
           "rightYAxisLabel": "",
           "leftYAxisLabel": ""
         }
@@ -221,7 +221,7 @@
           ],
           "aliasColors": {},
           "aliasYAxis": {},
-          "title": "Pools - IOPS read",
+          "title": "Pools - IOPS read (rs)",
           "rightYAxisLabel": "",
           "leftYAxisLabel": ""
         },
@@ -286,7 +286,7 @@
           ],
           "aliasColors": {},
           "aliasYAxis": {},
-          "title": "Pools - IOPS write"
+          "title": "Pools - IOPS write (ws)"
         }
       ],
       "notice": false
@@ -466,27 +466,27 @@
         "ARC demand and prefetch",
         "ARC evictions and operations",
         "ARC hash collisions and mutex operations",
-        "ARC L2 bandwidth",
+        "ARC L2 bandwidth (rx, tx)",
         "ARC size and hit ratio"
       ],
       "Network": [
-        "Traffic",
-        "Packets",
-        "Errors"
+        "Traffic (tx, rx)",
+        "Packets (tx, rx)",
+        "Errors (tx, rx)"
       ],
       "Disk": [
-        "IOPS",
-        "Bandwidth",
-        "Transactions",
-        "Average service time",
-        "Average number of transactions"
+        "IOPS (rs, ws)",
+        "Bandwidth (krs, kws)",
+        "Transactions (%b, %w)",
+        "Average service time (asvc_t, wsvc_t)",
+        "Average number of transactions (actv, wait)"
       ],
       "Pool": [
-        "IOPS",
-        "Bandwidth",
-        "Transactions",
-        "Average number of transactions",
-        "Average service time"
+        "IOPS (rs, ws)",
+        "Bandwidth (krs, kws)",
+        "Transactions (%b, %w)",
+        "Average number of transactions (actv, wait)",
+        "Average service time (asvc_t, wsvc_t)"
       ],
       "Dataset": [
         "IOPS",

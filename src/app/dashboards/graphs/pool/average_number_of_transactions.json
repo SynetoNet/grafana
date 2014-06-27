@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - average number of transactions actively being serviced",
+			"title": "Pools - average number of transactions actively being serviced (actv)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - average number of transactions waiting for service"
+			"title": "Pools - average number of transactions waiting for service (wait)"
 		}
 	],
 	"notice": false

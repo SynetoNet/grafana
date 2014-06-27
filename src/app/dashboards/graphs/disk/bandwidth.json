@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Disks - bandwidth read",
+			"title": "Disks - bandwidth read (krs)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Disks - bandwidth write"
+			"title": "Disks - bandwidth write (kws)"
 		}
 	],
 	"notice": false

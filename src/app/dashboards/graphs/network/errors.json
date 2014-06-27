@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - errors out",
+			"title": "Network - errors out (tx)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - errors in"
+			"title": "Network - errors in (rx)"
 		}
 	],
 	"notice": false

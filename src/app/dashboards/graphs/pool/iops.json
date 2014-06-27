@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - IOPS read",
+			"title": "Pools - IOPS read (rs)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - IOPS write"
+			"title": "Pools - IOPS write (ws)"
 		}
 	],
 	"notice": false

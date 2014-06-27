@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - active average service time",
+			"title": "Pools - active average service time (asvc_t)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - wait average service time"
+			"title": "Pools - wait average service time (wsvc_t)"
 		}
 	],
 	"notice": false

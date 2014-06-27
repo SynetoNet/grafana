@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - packets out",
+			"title": "Network - packets out (tx)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - packets in"
+			"title": "Network - packets in (rx)"
 		}
 	],
 	"notice": false

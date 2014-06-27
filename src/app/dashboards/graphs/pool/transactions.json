@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - busy transactions in progress",
+			"title": "Pools - busy transactions in progress (%b)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - transactions waiting for service"
+			"title": "Pools - transactions waiting for service (%w)"
 		}
 	],
 	"notice": false

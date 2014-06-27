@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "ARC - L2 bandwidth received",
+			"title": "ARC - L2 bandwidth received (rx)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "ARC - L2 bandwidth transmitted"
+			"title": "ARC - L2 bandwidth transmitted (tx)"
 		}
 	],
 	"notice": false

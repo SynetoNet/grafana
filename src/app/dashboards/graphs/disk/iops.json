@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Disks - IOPS read",
+			"title": "Disks - IOPS read (rs)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Disks - IOPS write"
+			"title": "Disks - IOPS write (ws)"
 		}
 	],
 	"notice": false

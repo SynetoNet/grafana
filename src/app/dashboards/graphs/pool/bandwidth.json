@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - bandwidth read",
+			"title": "Pools - bandwidth read (krs)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Pools - bandwidth write"
+			"title": "Pools - bandwidth write (kws)"
 		}
 	],
 	"notice": false

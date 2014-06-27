@@ -63,7 +63,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - traffic out",
+			"title": "Network - traffic out (tx)",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -124,7 +124,7 @@
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "Network - traffic in"
+			"title": "Network - traffic in (rx)"
 		}
 	],
 	"notice": false

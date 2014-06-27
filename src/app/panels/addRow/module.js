@@ -19,7 +19,10 @@ define([
 
 			$scope.add_row = function (category, rowTitle) {
 				var dashboard = angular.copy($scope.dashboard);
-				var rowId = rowTitle.replace(/ /g, '_').toLowerCase();
+				if (rowTitle.indexOf('(') > 0) {
+					rowTitle = rowTitle.substring(0, rowTitle.indexOf('('));
+				}
+				var rowId = rowTitle.trim().replace(/ /g, '_').toLowerCase();
 				$rootScope.$emit('$routeChangeSuccess');
 				return $http({
 					url: "/grafana/app/dashboards/graphs/" + category.toLowerCase() + "/" + rowId + '.json?' + new Date().getTime(),

@@ -23,9 +23,10 @@ define([
 					rowTitle = rowTitle.substring(0, rowTitle.indexOf('('));
 				}
 				var rowId = rowTitle.trim().replace(/ /g, '_').toLowerCase();
+				var categoryId = category.replace(/ /g, '_').toLowerCase();
 				$rootScope.$emit('$routeChangeSuccess');
 				return $http({
-					url: "/grafana/app/dashboards/graphs/" + category.toLowerCase() + "/" + rowId + '.json?' + new Date().getTime(),
+					url: "/grafana/app/dashboards/graphs/" + categoryId + "/" + rowId + '.json?' + new Date().getTime(),
 					method: "GET"
 				}).then(function (result) {
 					if (!result) {

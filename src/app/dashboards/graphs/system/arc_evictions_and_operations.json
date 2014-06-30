@@ -58,7 +58,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.cache_eviction-*, '(\\w?\\W?)+_eviction-','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_eviction-*,2,'sum'),'cache_eviction-','')),-1)"
 				}
 			],
 			"aliasColors": {},
@@ -119,7 +119,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.cache_operation-*, '(\\w?\\W?)+_operation-','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_operation-*,2,'sum'),'cache_operation-','')),-1)"
 				}
 			],
 			"aliasColors": {},

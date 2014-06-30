@@ -58,7 +58,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.hash_collisions,'(\\w?\\W?)+hash_','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.hash_collisions*,2,'sum'),'hash_','')),-1)"
 				}
 			],
 			"aliasColors": {},
@@ -111,7 +111,7 @@
 			},
 			"percentage": false,
 			"zerofill": true,
-			"nullPointMode": "connected",x
+			"nullPointMode": "connected",
 			"steppedLine": false,
 			"tooltip": {
 				"value_type": "cumulative",
@@ -119,7 +119,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.mutex_operations-*,'(\\w?\\W?)+_operations-','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.mutex_operations-*,2,'sum'),'mutex_operations-','')),-1)"
 				}
 			],
 			"aliasColors": {},

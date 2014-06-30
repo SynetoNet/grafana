@@ -58,7 +58,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.cache_size-*, '(\\w?\\W?)+size-','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_size-*,2,'sum'),'cache_size-','')),-1)"
 				}
 			],
 			"aliasColors": {},
@@ -119,7 +119,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.cache_ratio-*, '(\\w?\\W?)+ratio-','')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_ratio-*,2,'sum'),'cache_ratio-','')),-1)"
 				}
 			],
 			"aliasColors": {},

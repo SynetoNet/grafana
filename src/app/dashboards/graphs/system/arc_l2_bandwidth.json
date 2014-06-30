@@ -58,7 +58,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.io_octets-L2.rx,'(\\w?\\W?)+','received bytes / s')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.io_octets-L2.rx,3,'sum'),'rx','received bytes / s')),-1)"
 				}
 			],
 			"aliasColors": {},
@@ -119,7 +119,7 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(*.zfs_arc.io_octets-L2.tx,'(\\w?\\W?)+','transmitted bytes / s')), -1)"
+					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.io_octets-L2.tx,3,'sum'),'tx','transmitted bytes / s')),-1)"
 				}
 			],
 			"aliasColors": {},

@@ -1,5 +1,5 @@
 {
-	"title": "ARC - Adaptive Replacement Cache",
+	"title": "Fibre channel",
 	"height": "200px",
 	"editable": false,
 	"collapse": false,
@@ -58,12 +58,12 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_result-demand_*,2,'sum'),'cache_result-demand_','')),-1)"
+					"target": "averageAbove(sortByName(groupByNode(aliasSub(*.fc_iostat-*.gauge-transfer-rate,'gauge-',''),2,'avg')), -1)"
 				}
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "System - ARC demand",
+			"title": "Fibre channel - transfer rate",
 			"rightYAxisLabel": "",
 			"leftYAxisLabel": ""
 		},
@@ -119,12 +119,12 @@
 			},
 			"targets": [
 				{
-					"target": "averageAbove(sortByName(aliasSub(groupByNode(*.zfs_arc.cache_result-prefetch_*,2,'sum'),'cache_result-prefetch_','')),-1)"
+					"target": "averageAbove(sortByName(groupByNode(aliasSub(*.fc_iostat-*.gauge-iops,'gauge-',''),2,'avg')), -1)"
 				}
 			],
 			"aliasColors": {},
 			"aliasYAxis": {},
-			"title": "System - ARC prefetch"
+			"title": "Fibre channel - IOPS"
 		}
 	],
 	"notice": false
